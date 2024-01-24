@@ -9,3 +9,5 @@ Then, run:
 3. `python manage.py runserver`
 
 Once that's done, you should be able to access your web application at http://127.0.0.1:8000. You will make changes to this application in this workshop - and you can view the list of things you need to do on the homepage of the website.
+
+When you're done, upload and submit your work on brightspace.

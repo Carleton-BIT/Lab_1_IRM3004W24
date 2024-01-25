@@ -4,18 +4,36 @@
 
 <p>List of blog posts:</p> {{blog_posts}}
 
-<p><i>Please note, there is no need to implement user accounts for this workshop...</i></p>
+<p><i>Please note, there is no need to implement user accounts for this lab...</i></p>
 
-<p><pre><mark>TODO:</mark> Create a model in the database to represent blog posts</pre></p>
+<h2>Key tasks:</h2>
 
-<p><pre><mark>TODO:</mark> Create a superuser and add some blog posts to your database using the Django admin view</pre></p>
+<p>These are tasks you need to complete to get the mark for the lab</p>
 
-<p><pre><mark>TODO:</mark> Get records from the database in your views.py instead of using a hardcoded list of blog posts</pre></p>
+<p><mark>TODO:</mark> <a href="https://docs.djangoproject.com/en/5.0/topics/db/models/">Create a model in models.py</a> to represent blog posts.</p>
 
-<p><pre><mark>TODO:</mark> Loop through blog posts and display them one-by-one</pre></p>
+<p><mark>TODO:</mark> Now that we've changed our models, we need to apply these changes to the database. In your terminal (in the folder with manage.py) run <code>python manage.py makemigrations</code> and <code>python manage.py migrate</code> </p>
 
-<p><pre><mark>TODO:</mark> Add a form to create new blog posts</pre></p>
+<p><mark>TODO:</mark> <a href="https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin">Register your model with Django's admin interface</a> - this lets you create new blog posts and try out your model without writing code. <a href="https://github.com/Carleton-BIT/lecture-13-github-actions/blob/main/studentdemo/todoapp/admin.py">This is an example</a> of me registering my model in an application that has a model called Task.</p>
 
-<p><pre><mark>TODO:</mark> Add a delete button to each blog post</pre></p>
+<p><mark>TODO:</mark> <a href="https://docs.djangoproject.com/en/5.0/intro/tutorial02/#creating-an-admin-user">Create a superuser</a> which is an account you can use to access the Django admin site. Note that when typing in your password, the text won't appear in the terminal - that's a security feature so people can't see your password if they look over your shoulder.</p>
 
-<p><pre><mark>TODO:</mark> Add an edit button to each blog post</pre></p>
+<p><mark>TODO:</mark> <a href="https://docs.djangoproject.com/en/5.0/intro/tutorial02/#start-the-development-server">Log into the admin site</a> at 127.0.0.1:8000 and try adding some blog posts to your database.</p>
+
+<p><mark>TODO:</mark> Get records from the database in your views.py instead of using a hardcoded list of blog posts. If your model is called Post, you should import your model in your view (<code>from .views import Post</code>),and then you can get the list of posts with <code>Post.objects.all()</code></p>
+
+<h2>Stretch goals:</h2>
+
+<p>I recommend doing these during the lab if you have time, or on your own time as an exercise. It will be helpful to you when you're building your project.</p>
+
+<p><mark>TODO:</mark> Loop through blog posts and display them one-by-one. Here's an example of doing something similar <a href="https://docs.djangoproject.com/en/5.0/intro/tutorial03/#id5">from the Django tutorial</a> and <a href="https://github.com/Carleton-BIT/lecture-13-github-actions/blob/main/studentdemo/todoapp/templates/index.html">a past class of mine.<a/></p>
+
+<p><mark>TODO:</mark> Add a form to create new blog posts. See <a href="https://docs.djangoproject.com/en/5.0/topics/forms/">Django's guide to forms.</a></p>
+
+<p><mark>TODO:</mark> Add a delete button to each blog post. <a href="https://github.com/Carleton-BIT/simple-todoapp-django/tree/main/todoapp">This application I wrote in the past</a> has this functionality - in particular, check out views.py, urls.py, and templates/index.html.</p>
+
+<p><mark>TODO:</mark> Add an edit button to each blog post. This will require you to add an edit button that sends users to a new page that contains a form to edit that post.</p>
+
+<h2>Additional resources:</h2>
+
+I find that the Django Tutorial is very helpful for people who want to build their own application. https://docs.djangoproject.com/en/5.0/topics/db/
